@@ -25,17 +25,25 @@ const matchAllNumbers = (str) => {
   return str.match(/[0-9]+/g) === null ? emptyArr : str.match(/[0-9]+/g)
 };
 
-const matchAllNumbersAsNumbers = (str) => { };
+const matchAllNumbersAsNumbers = (str) => {
+  const emptyArr = []
+  return str.match(/[0-9]+/g) === null ? emptyArr : str.match(/[0-9]+/g).map(num => num = num * 1)
+};
 
-const matchAllWords = (str) => { };
+const matchAllWords = (str) => {
+  const emptyArr = []
+  return str.match(/[A-Z']+/gi) === null ? emptyArr : str.match(/[A-Z']+/gi)
+};
 
-const replaceAllNumbers = (str) => { };
+const replaceAllNumbers = (str) => str.replace(/[0-9]+/g, '???');
 
-const fixFileName = (str) => { };
+const fixFileName = (str) => str.replace(/\s+/g, '_');
 
-const nameRedacter = (str) => { };
+const nameRedacter = (str) => str.replace(/\w[A-Z]+/g, 'REDACTED');
 
-const camelToSnakeCase = (str) => { };
+const camelToSnakeCase = (str) => {
+  return str.replace()
+};
 
 module.exports = {
   helloWorldRegex,
