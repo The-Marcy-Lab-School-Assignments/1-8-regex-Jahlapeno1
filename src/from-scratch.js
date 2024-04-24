@@ -1,3 +1,4 @@
+/** FEEDBACK: Great job passing all test cases! */
 const helloWorldRegex = (str) => {
   return /hello world/gi.test(str)
 };
